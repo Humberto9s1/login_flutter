@@ -1,18 +1,22 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:login/Screens/Welcome/welcome_screen.dart';
+import 'package:login/content.dart';
 
 void main() => runApp(MyApp());
 
-class myHomePage extends StatefulWidget {
-  @override
-  _myHomePageState createState() => _myHomePageState();
-}
-
-class _myHomePageState extends State<myHomePage> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Flutter Auth",
+      theme: ThemeData(
+        primaryColor: KPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: WelcomeScreen(),
+    );
   }
 }
+
 
